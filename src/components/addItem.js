@@ -1,5 +1,6 @@
 import React,{useState} from "react"
 import "../css/add.css"
+
 function AddItem (props){
 
     const [amout, setAmount] = useState('')
@@ -8,19 +9,15 @@ function AddItem (props){
 
     const add = (()=>{
 
-        props.add (amout, item , transactionType) ;
+        props.add(amout, item , transactionType);
     })
     return (
         <div>
             <h1 style={{paddingTop:"5px"}}>Add transactions</h1>
-            <input 
-            placeholder="Enter item" 
-            onChange={(e)=> setItem(e.target.value)} 
+            <input placeholder="Enter item" onChange={(e)=> setItem(e.target.value)} 
             />{" "} 
             <br></br>
-            <input 
-            placeholder="Enter amount" 
-            onChange={(e)=> setAmount(e.target.value)} 
+            <input placeholder="Enter amount" onChange={(e)=> setAmount(e.target.value)} 
             />{" "} 
             <br></br>
 
@@ -30,9 +27,7 @@ function AddItem (props){
             </select>{" "} 
             <br></br>
 
-            <button id="btn" onClick={add}>
-                add
-            </button>
+            <button id="btn" onClick={add}>add</button>
         </div>
     );
 }

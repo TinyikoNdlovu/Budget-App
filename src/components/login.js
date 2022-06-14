@@ -1,18 +1,18 @@
 import {useHistory} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
-function Login (){
+function Login() {
 
     const btn = {
         width:'150px',
-        height:'30px' ,
+        height:'30px',
         marginTop:"3%"
     }
 
-    let history = useHistory() ;
+    let history = useHistory();
 
     const login = (()=>{
-        history.push("/home") ;
+        history.push("/home");
     })
 
     return (
@@ -23,7 +23,7 @@ function Login (){
 
             <input type="password" placeholder="Enter your password" />
 
-            <button style={btn} onClick={login}>Loginn </button>
+            <button style={btn} onClick={login}>Login</button>
 
             <span>Dont have an account</span>{" "}
             <span>

@@ -1,22 +1,23 @@
-import {useHistory} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-function SignUp (){
+function SignUp() {
 
-    let History = useHistory();
+    let history = useHistory();
 
-    const Register = () => {
+    const Register = (()=>{
         history.push("/home");
-    };
-    return (
+    });
+
+    return(
         <div className="container">
 
-            <h1>Register account here </h1>
-            <input type="email" placeholder="Enter your email" />
+            <h1>Register account here</h1>
+            <input type="email" placeholder="Enter your email" /> <br></br>
 
             <input type="password" placeholder="Enter your password" />
 
-            <button>Sign up</button>
+            <button onClick={Register}>Sign up</button>
         </div>
     );
 }

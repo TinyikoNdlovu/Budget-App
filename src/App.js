@@ -3,24 +3,22 @@ import './App.css';
 
 import React, {useState} from 'react'
 import Home from './components/home'
-import Login from './components/login' ;
-import SignUp from './components/signup' ;
+import Login from './components/login';
+import SignUp from './components/signup';
 
-import {BrowserRouter as Router , Switch , Route} from 'react-router-dom'
+import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 
 function App() {
 
   const [transaction, setTransaction] = useState ([]);
 
-  const addTransaction = ((amout, item , transactionType)=>{
+  const addTransaction = ((amout, item, transactionType) =>{
 
-
-    setTransaction((item)=> [...item, {
+    setTransaction((items)=> [...items, {
       amount:amout,
-      item:transaction ,
+      item:item,
       transactionType:transactionType
     }])
-
   })
   return (
 
@@ -28,13 +26,13 @@ function App() {
       <Switch>
         <Route exact path="/" component={Login}></Route>
         <Route path="/sign-up" component={SignUp}></Route>
-
-        <Route path="/home">
+        <Route path="/home" >
         <Home list={transaction} add={addTransaction} />
         </Route>
       </Switch>
-
     </Router>
+
+    
     
   );
 }
