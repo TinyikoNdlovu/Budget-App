@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'
 import AddItem from './addItem'
 import DisplayTransaction from './displayTransaction'
 import {BudgetBalance} from './balance'
@@ -15,16 +15,16 @@ function Home (props) {
         let income = 0;
 
         for (let index = 0; index < props.list.length; index++) {
-            if(props.list[index].transactionType == "Expense") {
-                expense = expense + parseInt(props.list[index].amout);
+            if(props.list[index].transactionType === "Expense") {
+                expense = expense + parseInt(props.list[index].amount);
             }else {
-                income = income + parseInt(props.list[index].amout);
+                income = income + parseInt(props.list[index].amount);
             }
         }
         
-        setIncome(income);
-        setExpense(expense);
-    }, [props.list.length]);
+        setIncome(income)
+        setExpense(expense)
+    }, [props.list.length])
     return (
         <div className="container">
             <BudgetBalance expense = {expense} income = {income} />

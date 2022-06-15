@@ -3,7 +3,7 @@ import '../css/balance.css'
 function BudgetBalance(props){
 
     return (
-        <div>
+        <div style={{marginTop:"5%"}}>
             <h4>Your Balance</h4>
             <h2>R {props.income - props.expense}</h2> 
 
