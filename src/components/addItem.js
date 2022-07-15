@@ -1,9 +1,9 @@
-import React,{useState} from "react"
-import "../css/add.css"
+import React,{useState} from "react";
+import "../css/add.css";
 
 import {db} from '../config/firebase';
 
-import {addDoc, collection} from 'firebase/firestore'
+import {addDoc, collection} from 'firebase/firestore';
 
 function AddItem (props){
 

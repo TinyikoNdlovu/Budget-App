@@ -3,7 +3,8 @@ import {useHistory} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import {auth} from '../config/firebase'
+import {auth} from '../config/firebase';
+
 function SignUp() {
 
     const [email, setEmail] = useState('');
@@ -13,7 +14,7 @@ function SignUp() {
 
     const Register = (()=>{
         createUserWithEmailAndPassword(auth, email, password).then(()=>{
-            history.push("/home");
+            history.push("/login");
         }).catch((error)=>{
             console.log(error);
         })

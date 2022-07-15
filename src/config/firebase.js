@@ -7,13 +7,12 @@ import {getFirestore} from 'firebase/firestore'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDx2VQjKEusZdKk5CS4r6LNzOtiowgmFV8",
-  authDomain: "budget-app-deacf.firebaseapp.com",
-  projectId: "budget-app-deacf",
-  storageBucket: "budget-app-deacf.appspot.com",
-  messagingSenderId: "736183310405",
-  appId: "1:736183310405:web:e6ae63fc86febbe3862b2c",
-  measurementId: "G-XXPXNF129T"
+  apiKey: "AIzaSyCJeDsjkzPUKB8O6ihmxJR8lJM6--gGQ2s",
+  authDomain: "budget-app-e4edd.firebaseapp.com",
+  projectId: "budget-app-e4edd",
+  storageBucket: "budget-app-e4edd.appspot.com",
+  messagingSenderId: "611367593467",
+  appId: "1:611367593467:web:995b25a2cc6cc06c05175e"
 };
 
 // Initialize Firebase
